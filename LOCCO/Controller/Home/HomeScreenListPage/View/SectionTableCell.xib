@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Metropolis-Medium.ttf">
+            <string>Metropolis-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="81" id="KGk-i7-Jjw" customClass="SectionTableCell" customModule="LOCCO" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GjF-ec-D5I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
+                        <subviews>
+                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YCi-VA-ofN">
+                                <rect key="frame" x="16" y="16" width="288" height="49"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_menu_tunnel" translatesAutoresizingMaskIntoConstraints="NO" id="lwk-3J-Q8U">
+                                        <rect key="frame" x="0.0" y="12.666666666666668" width="24" height="24.000000000000004"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="7z0-e0-63F"/>
+                                            <constraint firstAttribute="height" constant="24" id="aGG-zQ-IiH"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wJ-Xo-Jv8">
+                                        <rect key="frame" x="40" y="16.666666666666664" width="151.33333333333334" height="16"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Metropolis-Medium" family="Metropolis" pointSize="16"/>
+                                        <color key="textColor" name="AppDarkBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORL-2K-Sc9">
+                                        <rect key="frame" x="207.33333333333334" y="16.666666666666664" width="40.666666666666657" height="16"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Metropolis-Medium" family="Metropolis" pointSize="16"/>
+                                        <color key="textColor" name="AppSkyBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="3Rn-YL-0aK">
+                                        <rect key="frame" x="264" y="12.666666666666668" width="24" height="24.000000000000004"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="YCi-VA-ofN" secondAttribute="trailing" constant="16" id="6y1-Nl-HTA"/>
+                            <constraint firstItem="YCi-VA-ofN" firstAttribute="leading" secondItem="GjF-ec-D5I" secondAttribute="leading" constant="16" id="RSc-98-8sQ"/>
+                            <constraint firstItem="YCi-VA-ofN" firstAttribute="top" secondItem="GjF-ec-D5I" secondAttribute="top" constant="16" id="cJL-c3-NdI"/>
+                            <constraint firstAttribute="bottom" secondItem="YCi-VA-ofN" secondAttribute="bottom" constant="16" id="dTK-U1-LoB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="GjF-ec-D5I" secondAttribute="bottom" id="62e-x7-fLE"/>
+                    <constraint firstAttribute="trailing" secondItem="GjF-ec-D5I" secondAttribute="trailing" id="6uA-Tk-rHk"/>
+                    <constraint firstItem="GjF-ec-D5I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Esq-tm-cKV"/>
+                    <constraint firstItem="GjF-ec-D5I" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="KRb-0b-FKn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="baseView" destination="GjF-ec-D5I" id="1JN-eN-KhP"/>
+                <outlet property="icLeading" destination="lwk-3J-Q8U" id="cAh-Tp-nTB"/>
+                <outlet property="icTrailing" destination="3Rn-YL-0aK" id="5dV-9B-bVv"/>
+                <outlet property="lblTitle" destination="9wJ-Xo-Jv8" id="CLT-LV-gGx"/>
+                <outlet property="stackMain" destination="YCi-VA-ofN" id="w0i-bk-zGo"/>
+                <outlet property="trailingLbl" destination="ORL-2K-Sc9" id="eqK-Ze-hOR"/>
+            </connections>
+            <point key="canvasLocation" x="129.7709923664122" y="1.7605633802816902"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_menu_tunnel" width="20.333333969116211" height="19.333333969116211"/>
+        <image name="right_arrow" width="24" height="24"/>
+        <namedColor name="AppDarkBlue">
+            <color red="0.23137254901960785" green="0.30196078431372547" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppSkyBlue">
+            <color red="0.42352941176470588" green="0.76078431372549016" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

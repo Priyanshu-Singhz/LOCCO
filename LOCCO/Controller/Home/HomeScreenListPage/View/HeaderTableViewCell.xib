@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LondrinaSolid-Black.ttf">
+            <string>LondrinaSolid-Black</string>
+        </array>
+        <array key="Metropolis-Regular.ttf">
+            <string>Metropolis-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="HeaderTableViewCell" customModule="LOCCO" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="460" height="206"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="460" height="206"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VX-Lx-rmw">
+                        <rect key="frame" x="0.0" y="0.0" width="460" height="198"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cd8-Mc-K2S">
+                                <rect key="frame" x="16" y="16" width="428" height="16"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufF-xl-E8z">
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="16"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Medal Ribbon Star" translatesAutoresizingMaskIntoConstraints="NO" id="aPK-Id-bBD">
+                                                <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="9Ke-6H-ko6"/>
+                                                    <constraint firstAttribute="width" constant="16" id="MOL-M9-upn"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pathfinder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdW-ZQ-FSJ">
+                                                <rect key="frame" x="16.666666666666664" y="0.0" width="69.333333333333343" height="16"/>
+                                                <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="FdW-ZQ-FSJ" firstAttribute="leading" secondItem="aPK-Id-bBD" secondAttribute="trailing" constant="0.5" id="4XX-Dg-xz3"/>
+                                            <constraint firstItem="FdW-ZQ-FSJ" firstAttribute="top" secondItem="ufF-xl-E8z" secondAttribute="top" id="6rH-wl-QqC"/>
+                                            <constraint firstAttribute="bottom" secondItem="aPK-Id-bBD" secondAttribute="bottom" id="Bun-8a-Fes"/>
+                                            <constraint firstItem="aPK-Id-bBD" firstAttribute="leading" secondItem="ufF-xl-E8z" secondAttribute="leading" id="Phj-y7-Rcr"/>
+                                            <constraint firstItem="aPK-Id-bBD" firstAttribute="top" secondItem="ufF-xl-E8z" secondAttribute="top" id="bNw-2x-KfR"/>
+                                            <constraint firstAttribute="bottom" secondItem="FdW-ZQ-FSJ" secondAttribute="bottom" id="brM-pG-IB9"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6z-mn-yjE">
+                                        <rect key="frame" x="360" y="0.0" width="68" height="16"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="18.500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSF-Ga-fc3">
+                                                <rect key="frame" x="16.666666666666689" y="0.0" width="51.333333333333343" height="16"/>
+                                                <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="Lightbulb" translatesAutoresizingMaskIntoConstraints="NO" id="QRI-W2-rQi">
+                                                <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="16" id="8Je-dY-cy9"/>
+                                                    <constraint firstAttribute="height" constant="16" id="rqd-oP-v33"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="QRI-W2-rQi" firstAttribute="top" secondItem="f6z-mn-yjE" secondAttribute="top" id="Bga-5p-ezG"/>
+                                            <constraint firstAttribute="trailing" secondItem="MSF-Ga-fc3" secondAttribute="trailing" id="DRP-dI-zDY"/>
+                                            <constraint firstItem="QRI-W2-rQi" firstAttribute="leading" secondItem="f6z-mn-yjE" secondAttribute="leading" id="F4O-ls-QQP"/>
+                                            <constraint firstAttribute="bottom" secondItem="QRI-W2-rQi" secondAttribute="bottom" id="HUR-aM-zgn"/>
+                                            <constraint firstAttribute="bottom" secondItem="MSF-Ga-fc3" secondAttribute="bottom" id="OhX-cb-ruF"/>
+                                            <constraint firstItem="MSF-Ga-fc3" firstAttribute="leading" secondItem="QRI-W2-rQi" secondAttribute="trailing" constant="0.5" id="aL5-X0-WER"/>
+                                            <constraint firstItem="MSF-Ga-fc3" firstAttribute="top" secondItem="f6z-mn-yjE" secondAttribute="top" id="gd1-AK-bfP"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JOAQUIM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrT-Gg-PoV">
+                                <rect key="frame" x="16" y="36" width="428" height="58"/>
+                                <fontDescription key="fontDescription" name="LondrinaSolid-Black" family="Londrina Solid" pointSize="32"/>
+                                <color key="textColor" name="AppDarkBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="U8B-dj-ReM">
+                                <rect key="frame" x="16" y="110" width="428" height="72"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="6vg-In-LTW"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="8" minimumInteritemSpacing="8" id="STr-pK-WSL">
+                                    <size key="itemSize" width="128" height="69"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" name="AppWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rrT-Gg-PoV" secondAttribute="trailing" constant="16" id="3uD-hF-WUj"/>
+                            <constraint firstAttribute="trailing" secondItem="U8B-dj-ReM" secondAttribute="trailing" constant="16" id="BkB-hw-G92"/>
+                            <constraint firstAttribute="trailing" secondItem="Cd8-Mc-K2S" secondAttribute="trailing" constant="16" id="GrZ-dF-Ef7"/>
+                            <constraint firstItem="U8B-dj-ReM" firstAttribute="leading" secondItem="1VX-Lx-rmw" secondAttribute="leading" constant="16" id="K5x-zi-1qc"/>
+                            <constraint firstItem="Cd8-Mc-K2S" firstAttribute="leading" secondItem="1VX-Lx-rmw" secondAttribute="leading" constant="16" id="PxP-zF-LLs"/>
+                            <constraint firstItem="U8B-dj-ReM" firstAttribute="top" secondItem="rrT-Gg-PoV" secondAttribute="bottom" constant="16" id="SfD-QE-9od"/>
+                            <constraint firstAttribute="bottom" secondItem="U8B-dj-ReM" secondAttribute="bottom" constant="16" id="aMA-Ts-emy"/>
+                            <constraint firstItem="rrT-Gg-PoV" firstAttribute="top" secondItem="Cd8-Mc-K2S" secondAttribute="bottom" constant="4" id="cN2-m5-MHm"/>
+                            <constraint firstItem="rrT-Gg-PoV" firstAttribute="leading" secondItem="1VX-Lx-rmw" secondAttribute="leading" constant="16" id="grP-kK-nk5"/>
+                            <constraint firstItem="Cd8-Mc-K2S" firstAttribute="top" secondItem="1VX-Lx-rmw" secondAttribute="top" constant="16" id="m2B-8d-d4C"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="1VX-Lx-rmw" secondAttribute="bottom" constant="8" id="5Qv-R4-9TO"/>
+                    <constraint firstItem="1VX-Lx-rmw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="w8T-le-GdA"/>
+                    <constraint firstItem="1VX-Lx-rmw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="w8o-jC-Hd5"/>
+                    <constraint firstAttribute="trailing" secondItem="1VX-Lx-rmw" secondAttribute="trailing" id="wT2-ip-IYK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="categoryCollectionView" destination="U8B-dj-ReM" id="QQ8-6T-pZd"/>
+                <outlet property="pathFinderLbl" destination="FdW-ZQ-FSJ" id="rkV-vP-bps"/>
+            </connections>
+            <point key="canvasLocation" x="238.1679389312977" y="45.774647887323944"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Lightbulb" width="16" height="16"/>
+        <image name="Medal Ribbon Star" width="16" height="16"/>
+        <namedColor name="AppDarkBlue">
+            <color red="0.23137254901960785" green="0.30196078431372547" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppWhite">
+            <color red="0.99607843137254903" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

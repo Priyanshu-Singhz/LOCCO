@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Metropolis-Bold.ttf">
+            <string>Metropolis-Bold</string>
+        </array>
+        <array key="Metropolis-Medium.ttf">
+            <string>Metropolis-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="153" id="KGk-i7-Jjw" customClass="ContactInfoTableViewCell" customModule="LOCCO" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="496" height="153"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="496" height="153"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iSs-iP-uda" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="32" width="496" height="92"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you have any further questions?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcK-2x-dW5">
+                                <rect key="frame" x="16" y="16" width="253" height="15"/>
+                                <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="15"/>
+                                <color key="textColor" name="AppDarkBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please send us an e-mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmN-iS-cgn">
+                                <rect key="frame" x="16" y="35" width="172" height="15"/>
+                                <fontDescription key="fontDescription" name="Metropolis-Medium" family="Metropolis" pointSize="15"/>
+                                <color key="textColor" name="AppDarkBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1uB-Bf-bbV">
+                                <rect key="frame" x="16" y="57" width="143" height="16"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Email" translatesAutoresizingMaskIntoConstraints="NO" id="xGW-ka-GjR">
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello@locco.app" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWH-NE-Y07">
+                                        <rect key="frame" x="24" y="0.0" width="119" height="16"/>
+                                        <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="15"/>
+                                        <color key="textColor" name="AppSkyBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tmN-iS-cgn" firstAttribute="top" secondItem="YcK-2x-dW5" secondAttribute="bottom" constant="4" id="5GY-IL-lc8"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YcK-2x-dW5" secondAttribute="trailing" constant="16" id="5kR-tB-Ru6"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1uB-Bf-bbV" secondAttribute="trailing" constant="16" id="DEe-sw-c2X"/>
+                            <constraint firstAttribute="height" constant="92" id="G6S-Jp-YMb"/>
+                            <constraint firstItem="tmN-iS-cgn" firstAttribute="leading" secondItem="iSs-iP-uda" secondAttribute="leading" constant="16" id="ORS-zn-32j"/>
+                            <constraint firstItem="YcK-2x-dW5" firstAttribute="leading" secondItem="iSs-iP-uda" secondAttribute="leading" constant="16" id="Vn0-Kg-ehV"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tmN-iS-cgn" secondAttribute="trailing" constant="16" id="aSC-9b-nEI"/>
+                            <constraint firstItem="1uB-Bf-bbV" firstAttribute="top" secondItem="tmN-iS-cgn" secondAttribute="bottom" constant="7" id="gig-iA-LD7"/>
+                            <constraint firstItem="1uB-Bf-bbV" firstAttribute="leading" secondItem="iSs-iP-uda" secondAttribute="leading" constant="16" id="lBn-1K-J43"/>
+                            <constraint firstItem="YcK-2x-dW5" firstAttribute="top" secondItem="iSs-iP-uda" secondAttribute="top" constant="16" id="xN3-cY-D6N"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="emailBtnPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BvT-ys-WhK"/>
+                        </connections>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="iSs-iP-uda" secondAttribute="trailing" id="FTc-ao-rzr"/>
+                    <constraint firstItem="iSs-iP-uda" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="32" id="WcS-kf-9FU"/>
+                    <constraint firstItem="iSs-iP-uda" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="cWh-6i-hJD"/>
+                    <constraint firstAttribute="bottom" secondItem="iSs-iP-uda" secondAttribute="bottom" id="kEE-Fi-26u"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="anyQuriesLbl" destination="YcK-2x-dW5" id="grp-HX-P36"/>
+                <outlet property="helloEmailLbl" destination="oWH-NE-Y07" id="hBa-W1-iMe"/>
+                <outlet property="sendEmailLbl" destination="tmN-iS-cgn" id="j7Z-lU-ins"/>
+            </connections>
+            <point key="canvasLocation" x="58.015267175572518" y="27.112676056338028"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Email" width="16" height="16"/>
+        <namedColor name="AppDarkBlue">
+            <color red="0.23137254901960785" green="0.30196078431372547" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppSkyBlue">
+            <color red="0.42352941176470588" green="0.76078431372549016" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

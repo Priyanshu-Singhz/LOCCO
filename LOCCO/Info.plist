@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>google</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.618056674391-8ln7ad698n9pdqdptv5vbr1js5rplode</string>
+			</array>
+		</dict>
+	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>comgooglemaps</string>
+		<string>googlechromes</string>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>LondrinaSolid-Black.ttf</string>
+		<string>LondrinaSolid-Regular.ttf</string>
+		<string>LondrinaSolid-Thin.ttf</string>
+		<string>LondrinaSolid-Light.ttf</string>
+		<string>Metropolis-ThinItalic.ttf</string>
+		<string>Metropolis-Black.ttf</string>
+		<string>Metropolis-BlackItalic.ttf</string>
+		<string>Metropolis-Bold.ttf</string>
+		<string>Metropolis-BoldItalic.ttf</string>
+		<string>Metropolis-ExtraBold.ttf</string>
+		<string>Metropolis-ExtraBoldItalic.ttf</string>
+		<string>Metropolis-ExtraLight.ttf</string>
+		<string>Metropolis-ExtraLightItalic.ttf</string>
+		<string>Metropolis-Light.ttf</string>
+		<string>Metropolis-LightItalic.ttf</string>
+		<string>Metropolis-Medium.ttf</string>
+		<string>Metropolis-MediumItalic.ttf</string>
+		<string>Metropolis-Regular.ttf</string>
+		<string>Metropolis-RegularItalic.ttf</string>
+		<string>Metropolis-SemiBold.ttf</string>
+		<string>Metropolis-SemiBoldItalic.ttf</string>
+		<string>Metropolis-Thin.ttf</string>
+	</array>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+		<key>UISceneConfigurations</key>
+		<dict>
+			<key>UIWindowSceneSessionRoleApplication</key>
+			<array>
+				<dict>
+					<key>UISceneConfigurationName</key>
+					<string>Default Configuration</string>
+					<key>UISceneDelegateClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+					<key>UISceneStoryboardFile</key>
+					<string>Main</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+</dict>
+</plist>

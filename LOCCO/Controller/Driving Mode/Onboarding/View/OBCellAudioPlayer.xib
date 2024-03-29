@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Metropolis-Bold.ttf">
+            <string>Metropolis-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="OBCellAudioPlayer" customModule="LOCCO" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="332" height="476"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="332" height="476"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NV4-w2-chF">
+                        <rect key="frame" x="12" y="10" width="308" height="454"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1D-AA-vqr">
+                                <rect key="frame" x="1" y="0.0" width="306" height="66"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPC-tm-oma">
+                                        <rect key="frame" x="66.5" y="0.0" width="173" height="66"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="4Tu-uv-w4O">
+                                                <rect key="frame" x="24" y="24" width="125" height="18"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Only 1 km left!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOM-ej-WdH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="18"/>
+                                                        <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="18"/>
+                                                        <color key="textColor" name="AppDarkBlue"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="AppWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="4Tu-uv-w4O" secondAttribute="bottom" constant="24" id="BMP-6G-cgX"/>
+                                            <constraint firstAttribute="trailing" secondItem="4Tu-uv-w4O" secondAttribute="trailing" constant="24" id="R5O-tF-DbZ"/>
+                                            <constraint firstItem="4Tu-uv-w4O" firstAttribute="leading" secondItem="LPC-tm-oma" secondAttribute="leading" constant="24" id="ZMu-LY-eST"/>
+                                            <constraint firstItem="4Tu-uv-w4O" firstAttribute="top" secondItem="LPC-tm-oma" secondAttribute="top" constant="24" id="pji-sU-TwX"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="LPC-tm-oma" firstAttribute="top" secondItem="M1D-AA-vqr" secondAttribute="top" id="1tk-H3-Bwz"/>
+                                    <constraint firstItem="LPC-tm-oma" firstAttribute="centerX" secondItem="M1D-AA-vqr" secondAttribute="centerX" id="b0H-dZ-VTO"/>
+                                    <constraint firstItem="LPC-tm-oma" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="M1D-AA-vqr" secondAttribute="leading" constant="50" id="eXv-gN-pBw"/>
+                                    <constraint firstAttribute="bottom" secondItem="LPC-tm-oma" secondAttribute="bottom" id="pyP-Mq-qvM"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3i-0O-6zo">
+                                <rect key="frame" x="0.0" y="76" width="308" height="378"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="image_ob_player" translatesAutoresizingMaskIntoConstraints="NO" id="RGU-L2-TMS">
+                                        <rect key="frame" x="12" y="12" width="284" height="354"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="RGU-L2-TMS" secondAttribute="trailing" constant="12" id="CuY-VZ-jLI"/>
+                                    <constraint firstItem="RGU-L2-TMS" firstAttribute="top" secondItem="f3i-0O-6zo" secondAttribute="top" constant="12" id="m2h-ol-xbM"/>
+                                    <constraint firstItem="RGU-L2-TMS" firstAttribute="leading" secondItem="f3i-0O-6zo" secondAttribute="leading" constant="12" id="ta3-OL-gip"/>
+                                    <constraint firstAttribute="bottom" secondItem="RGU-L2-TMS" secondAttribute="bottom" constant="12" id="vis-iZ-9yO"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="NV4-w2-chF" secondAttribute="trailing" constant="12" id="0Of-0V-W89"/>
+                <constraint firstItem="NV4-w2-chF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="Vox-Pw-DC9"/>
+                <constraint firstAttribute="bottom" secondItem="NV4-w2-chF" secondAttribute="bottom" constant="12" id="X7u-u7-WTX"/>
+                <constraint firstItem="NV4-w2-chF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="zPw-sQ-R9Q"/>
+            </constraints>
+            <size key="customSize" width="332" height="476"/>
+            <connections>
+                <outlet property="imgvMain" destination="RGU-L2-TMS" id="w2f-vg-bhy"/>
+                <outlet property="lblTitle" destination="qOM-ej-WdH" id="jbl-4X-p0q"/>
+                <outlet property="viewSpeech" destination="LPC-tm-oma" id="N6b-Y7-uqp"/>
+            </connections>
+            <point key="canvasLocation" x="354.375" y="213.38028169014083"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="image_ob_player" width="343" height="608.5"/>
+        <namedColor name="AppDarkBlue">
+            <color red="0.23137254901960785" green="0.30196078431372547" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppWhite">
+            <color red="0.99607843137254903" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

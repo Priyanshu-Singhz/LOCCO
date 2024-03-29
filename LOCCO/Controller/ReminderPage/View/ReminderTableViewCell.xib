@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Metropolis-Bold.ttf">
+            <string>Metropolis-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="122" id="KGk-i7-Jjw" customClass="ReminderTableViewCell" customModule="LOCCO" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="122"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="122"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B27-8h-OgF">
+                        <rect key="frame" x="25" y="16" width="344" height="106"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EJf-4t-Vbi">
+                                <rect key="frame" x="16" y="23" width="130.33333333333334" height="11"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dd.mm.yyyy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC3-4y-6s6">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="11"/>
+                                        <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="11"/>
+                                        <color key="textColor" name="AppDarkBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="at" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qA-KA-HJ5">
+                                        <rect key="frame" x="75" y="0.0" width="10.666666666666671" height="11"/>
+                                        <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="11"/>
+                                        <color key="textColor" name="appTextGray"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hh:mm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhX-uw-6L9">
+                                        <rect key="frame" x="93.666666666666657" y="0.0" width="36.666666666666657" height="11"/>
+                                        <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="11"/>
+                                        <color key="textColor" name="AppDarkBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="11" id="hJw-Hd-i3b"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULl-i6-lS9">
+                                <rect key="frame" x="16" y="42" width="312" height="1"/>
+                                <color key="backgroundColor" name="AppSkyBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="bcN-zK-t6Z"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Costum Title)" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="748-X5-mpa">
+                                <rect key="frame" x="16" y="51" width="312" height="16"/>
+                                <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="16"/>
+                                <color key="textColor" name="AppDarkBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSg-Ri-s55">
+                                <rect key="frame" x="306" y="11" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="9bH-1L-IAI"/>
+                                    <constraint firstAttribute="height" constant="24" id="DBP-fz-SdU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Menu Dots Circle"/>
+                                <connections>
+                                    <action selector="menuBtnClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BCl-5h-rmI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="AppBorder"/>
+                        <constraints>
+                            <constraint firstItem="748-X5-mpa" firstAttribute="leading" secondItem="B27-8h-OgF" secondAttribute="leading" constant="16" id="4e4-BC-ncM"/>
+                            <constraint firstItem="748-X5-mpa" firstAttribute="top" secondItem="ULl-i6-lS9" secondAttribute="bottom" constant="8" id="54V-5k-Aq6"/>
+                            <constraint firstAttribute="trailing" secondItem="ULl-i6-lS9" secondAttribute="trailing" constant="16" id="7pg-uS-CNa"/>
+                            <constraint firstItem="EJf-4t-Vbi" firstAttribute="top" secondItem="B27-8h-OgF" secondAttribute="top" constant="23" id="8tR-Ps-NBB"/>
+                            <constraint firstItem="ULl-i6-lS9" firstAttribute="leading" secondItem="B27-8h-OgF" secondAttribute="leading" constant="16" id="GS1-6s-YYL"/>
+                            <constraint firstItem="ZSg-Ri-s55" firstAttribute="top" secondItem="B27-8h-OgF" secondAttribute="top" constant="11" id="RZe-Dr-9Ce"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="748-X5-mpa" secondAttribute="bottom" constant="5" id="Rvh-Wv-fLI"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="77" id="bHH-DX-3ko"/>
+                            <constraint firstItem="ULl-i6-lS9" firstAttribute="top" secondItem="EJf-4t-Vbi" secondAttribute="bottom" constant="8" id="bi4-sl-ktU"/>
+                            <constraint firstItem="EJf-4t-Vbi" firstAttribute="leading" secondItem="B27-8h-OgF" secondAttribute="leading" constant="16" id="cdN-Nn-9sz"/>
+                            <constraint firstAttribute="trailing" secondItem="748-X5-mpa" secondAttribute="trailing" constant="16" id="eJ4-cC-IaB"/>
+                            <constraint firstAttribute="trailing" secondItem="ZSg-Ri-s55" secondAttribute="trailing" constant="14" id="uqb-GE-XjE"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="B27-8h-OgF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="QY1-aR-Dxc"/>
+                    <constraint firstAttribute="bottom" secondItem="B27-8h-OgF" secondAttribute="bottom" id="qrT-iq-ZaI"/>
+                    <constraint firstItem="B27-8h-OgF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="vlm-d5-t0J"/>
+                    <constraint firstAttribute="trailing" secondItem="B27-8h-OgF" secondAttribute="trailing" constant="24" id="yxl-kh-0I0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="btnMenu" destination="ZSg-Ri-s55" id="ajD-WM-14a"/>
+                <outlet property="contentViewBG" destination="B27-8h-OgF" id="FNy-Bo-gWf"/>
+                <outlet property="dateLbl" destination="HC3-4y-6s6" id="0QZ-9s-S0o"/>
+                <outlet property="timeLbl" destination="mhX-uw-6L9" id="awL-fZ-hkX"/>
+                <outlet property="titleLbl" destination="748-X5-mpa" id="iGu-ug-g7L"/>
+            </connections>
+            <point key="canvasLocation" x="-46.564885496183201" y="16.197183098591552"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Menu Dots Circle" width="24" height="24"/>
+        <namedColor name="AppBorder">
+            <color red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppDarkBlue">
+            <color red="0.23137254901960785" green="0.30196078431372547" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppSkyBlue">
+            <color red="0.42352941176470588" green="0.76078431372549016" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appTextGray">
+            <color red="0.61568627450980395" green="0.65098039215686276" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

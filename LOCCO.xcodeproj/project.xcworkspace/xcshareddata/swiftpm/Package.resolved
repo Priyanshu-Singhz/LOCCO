@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "dpotpview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Datt1994/DPOTPView.git",
+      "state" : {
+        "revision" : "950ecde0feef20f96abdd20a7442aa0ac2461626",
+        "version" : "1.5.12"
+      }
+    },
+    {
+      "identity" : "iqkeyboardmanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hackiftekhar/IQKeyboardManager.git",
+      "state" : {
+        "revision" : "aa656e1f0d95f0154622f453599318602848be3b",
+        "version" : "7.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}

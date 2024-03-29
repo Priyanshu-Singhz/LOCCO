@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Metropolis-Medium.ttf">
+            <string>Metropolis-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Driving OnboardVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="DrivingOnboardVC" id="Y6W-OH-hqX" customClass="DrivingOnboardVC" customModule="LOCCO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQW-7X-rgd">
+                                <rect key="frame" x="0.0" y="59" width="393" height="25"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lmU-1U-hEd">
+                                        <rect key="frame" x="25" y="0.0" width="343" height="25"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUd-5B-KA0" customClass="SMButton" customModule="LOCCO" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="46" height="25"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Metropolis-Medium" family="Metropolis" pointSize="15"/>
+                                                <color key="tintColor" name="AppWhite"/>
+                                                <state key="normal" title="back" image="ic_back_arrow">
+                                                    <color key="titleColor" name="AppWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="backClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9KZ-3j-VyR"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="GGJ-5q-X5q" customClass="JXPageControlScale" customModule="JXPageControl">
+                                                <rect key="frame" x="54" y="10" width="256" height="5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="NWr-lh-vWZ"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="activeSize">
+                                                        <size key="value" width="16" height="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                                        <color key="value" name="AppSkyBlue"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                                        <color key="value" name="AppWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="columnSpacing">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="inactiveSize">
+                                                        <size key="value" width="5" height="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYP-ND-UiE" customClass="SMButton" customModule="LOCCO" customModuleProvider="target">
+                                                <rect key="frame" x="318" y="0.0" width="25" height="25"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="DYP-ND-UiE" secondAttribute="height" id="3d1-U0-ev4"/>
+                                                </constraints>
+                                                <color key="tintColor" name="AppWhite"/>
+                                                <state key="normal" image="ic_close_gen">
+                                                    <color key="titleColor" name="AppWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="closeClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Job-Ks-kkl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="DYP-ND-UiE" firstAttribute="height" secondItem="lmU-1U-hEd" secondAttribute="height" id="HV8-68-wCe"/>
+                                            <constraint firstItem="PUd-5B-KA0" firstAttribute="height" secondItem="lmU-1U-hEd" secondAttribute="height" id="quh-2a-R6G"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="lmU-1U-hEd" firstAttribute="top" secondItem="WQW-7X-rgd" secondAttribute="top" id="13n-Go-yQa"/>
+                                    <constraint firstAttribute="trailing" secondItem="lmU-1U-hEd" secondAttribute="trailing" constant="25" id="UwS-27-PYz"/>
+                                    <constraint firstItem="lmU-1U-hEd" firstAttribute="leading" secondItem="WQW-7X-rgd" secondAttribute="leading" constant="25" id="iLM-Wi-vSM"/>
+                                    <constraint firstAttribute="bottom" secondItem="lmU-1U-hEd" secondAttribute="bottom" id="qAk-xj-6AO"/>
+                                    <constraint firstAttribute="height" constant="25" id="qCs-FQ-C9j"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pRm-T7-QXi">
+                                <rect key="frame" x="0.0" y="84" width="393" height="734"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ajQ-kN-rCF">
+                                    <size key="itemSize" width="393" height="734"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="7o3-KW-iXQ"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="n5g-2e-htO"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pRm-T7-QXi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="CWh-Vq-nDz"/>
+                            <constraint firstItem="pRm-T7-QXi" firstAttribute="top" secondItem="WQW-7X-rgd" secondAttribute="bottom" id="S9x-6G-Pha"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WQW-7X-rgd" secondAttribute="trailing" id="TdJ-Bj-EcU"/>
+                            <constraint firstItem="WQW-7X-rgd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="a7Z-P3-waO"/>
+                            <constraint firstItem="WQW-7X-rgd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="cmA-5Y-1o2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pRm-T7-QXi" secondAttribute="trailing" id="r3k-eG-j4j"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="pRm-T7-QXi" secondAttribute="bottom" id="vgU-on-Kmo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnBack" destination="PUd-5B-KA0" id="qff-N8-B6f"/>
+                        <outlet property="btnClose" destination="DYP-ND-UiE" id="0Yv-7K-oub"/>
+                        <outlet property="collectionMain" destination="pRm-T7-QXi" id="QT6-BL-TnU"/>
+                        <outlet property="pageController" destination="GGJ-5q-X5q" id="rVI-nr-kho"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_back_arrow" width="12" height="10.333333015441895"/>
+        <image name="ic_close_gen" width="16" height="16.333333969116211"/>
+        <namedColor name="AppSkyBlue">
+            <color red="0.42352941176470588" green="0.76078431372549016" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppWhite">
+            <color red="0.99607843137254903" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
