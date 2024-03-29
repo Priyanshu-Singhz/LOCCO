@@ -6,6 +6,10 @@
 //
 
 import Foundation
-struct ReminderModel{
-    var titleLbl,date,time:String
+struct ReminderModel: Codable {
+  let startDate: String
+  let email: String
+  let id: String
+  let updatedAt: String
+  let title: String
 }

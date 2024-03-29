@@ -1,10 +1,3 @@
-//
-//  ReminderVC.swift
-//  LOCCO
-//
-//  Created by Zignuts Technolab on 21/02/24.
-//
-
 import UIKit
 
 class ReminderVC: UIViewController {
@@ -22,16 +15,36 @@ class ReminderVC: UIViewController {
     var isFadeAnimation = false
     
     //MARK: - Properties
-    fileprivate var vmReminder = ViewModelReminder()
-    
-    //MARK: - View Life Cycle's
+    let vmReminder = ViewModelReminder()
+        
+        // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
         remainderTblView.register(UINib(nibName: "ReminderTableViewCell", bundle: nil), forCellReuseIdentifier: "ReminderTableViewCell")
-        remainderTblView.reloadData()
+        
+        // Fetch data from API
+        vmReminder.fetchDataFromAPI()
+        
+        // Observe for notification
+        NotificationCenter.default.addObserver(self, selector: #selector(dataFetched), name: Notification.Name("APIDataFetched"), object: nil)
     }
-    func setUpUI(){
+
+    @objc func dataFetched() {
+        // Reload table view after fetching data
+        DispatchQueue.main.async { [weak self] in
+            self?.remainderTblView.reloadData()
+        }
+    }
+
+    deinit {
+        // Remove observer when view controller is deallocated
+        NotificationCenter.default.removeObserver(self)
+    }
+
+
+        
+    func setUpUI() {
         headerView.roundCorners(corners: [.bottomLeft,.bottomRight], radius: 32)
         headerTextlbl.text = "home_reminder".translated.uppercased()
         noReminderLbl.text = "reminder_page_empty_default-text".translated
@@ -40,6 +53,7 @@ class ReminderVC: UIViewController {
         btnBack.setTitle("back-button".translated, for: .normal)
         underLineText()
     }
+    
     func underLineText() {
         let mainText = "reminder_page_empty_textbox".translated
         let underlineText = "settings"
@@ -51,11 +65,12 @@ class ReminderVC: UIViewController {
             emptyViewLbl.text = mainText
         }
     }
-
-    //MARK: - Button Action's
+        
+        // MARK: - Button Actions
     @IBAction func createNewReminderBtnClicked(_ sender: UIControl) {
         navigateToCreateReminder()
     }
+    
     @IBAction func reminderBtnClicked(_ sender: UIControl) {
         navigateToCreateReminder()
     }
@@ -73,31 +88,21 @@ class ReminderVC: UIViewController {
         }
     }
 }
-//MARK: - Table View Delegate's
-extension ReminderVC:UITableViewDelegate,UITableViewDataSource{
-  
+
+// MARK: - Table View Delegate and Data Source
+extension ReminderVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let rows =  vmReminder.arraySectionData[section].rows
+        let rows = vmReminder.arraySectionData[section].rows
         emptyView.isHidden = rows.isEmpty ? false : true
         remainderTblView.isHidden = rows.isEmpty ? true : false
+        print("count:  \(rows.count)")
         return rows.count
     }
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return vmReminder.arraySectionData.count
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        0
-    }
-    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
-        return 8
-    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let rowInfo = vmReminder.arraySectionData[indexPath.section].rows[indexPath.row]
         let cellIdentifier = rowInfo.type

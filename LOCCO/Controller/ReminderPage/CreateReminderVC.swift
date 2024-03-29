@@ -24,6 +24,10 @@ class CreateReminderVC: UIViewController {
     @IBOutlet var createRemainderButtonStack: UIStackView!
     fileprivate var currentValue:(date:Date?, title:String?) = (nil, nil)
 
+    var vmReminder = ViewModelReminder()
+    var currDate = ""
+    var currTitle = ""
+    
     var isShowDatepicker:Bool = false {
         didSet {
             updateDatePicker()
@@ -57,20 +61,26 @@ class CreateReminderVC: UIViewController {
     }
     
     @IBAction func btnCreateClicked(_ sender: Any) -> Void {
-        self.currentValue.title = txtWhereTo.text
-        if SMValidator.isEmptyString(self.currentValue.title) {
+        self.currTitle = txtWhereTo.text!
+        if SMValidator.isEmptyString(self.currTitle) {
             view.makeToast("Please enter where to")
             return
         }
-        
-        if self.currentValue.date == nil {
+        self.currDate = "sdfsff"
+        if self.currDate == "" {
             view.makeToast("Please select date")
             return
         }
         
-        
-        view.makeToast("Reminder added successfully!") { didTap in
-            self.navigationController?.popViewController(animated: true)
+        vmReminder.pushReminderToAPI(title: self.currTitle, date: self.currDate) { success in
+            if success {
+                self.view.makeToast("Reminder added successfully!") { didTap in
+                    self.navigationController?.popViewController(animated: true)
+                }
+            } else {
+                // Handle error
+                self.view.makeToast("Failed to add reminder. Please try again.")
+            }
         }
     }
     

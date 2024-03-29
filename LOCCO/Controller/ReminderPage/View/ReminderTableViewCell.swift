@@ -1,10 +1,3 @@
-//
-//  ReminderTableViewCell.swift
-//  LOCCO
-//
-//  Created by Zignuts Technolab on 21/02/24.
-//
-
 import UIKit
 
 class ReminderTableViewCell: UITableViewCell{
@@ -51,9 +44,38 @@ class ReminderTableViewCell: UITableViewCell{
     @IBAction func menuBtnClicked(_ sender: UIButton) {
         getCustomMenu()
     }
-    func configure(_ model:Rowmodel){
+    
+    func configure(_ model: Rowmodel) {
         titleLbl.text = model.title
-        dateLbl.text = model.date
-        timeLbl.text = model.time
+        
+        // Format the date
+        if let dateString = model.date {
+            let originalDateFormatter = DateFormatter()
+            originalDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+
+            if let date = originalDateFormatter.date(from: dateString) {
+                let newDateFormatter = DateFormatter()
+                newDateFormatter.dateFormat = "dd.MM.yyyy"
+                let formattedDate = newDateFormatter.string(from: date)
+                dateLbl.text = formattedDate
+            } else {
+                print("Failed to parse date string")
+            }
+        }
+
+        // Format the time
+        if let timeString = model.time {
+            let originalTimeFormatter = DateFormatter()
+            originalTimeFormatter.dateFormat = "E, d MMM yyyy HH:mm:ss zzz"
+
+            if let time = originalTimeFormatter.date(from: timeString) {
+                let newTimeFormatter = DateFormatter()
+                newTimeFormatter.dateFormat = "HH:mm"
+                let formattedTime = newTimeFormatter.string(from: time)
+                timeLbl.text = formattedTime
+            } else {
+                print("Failed to parse time string")
+            }
+        }
     }
 }
